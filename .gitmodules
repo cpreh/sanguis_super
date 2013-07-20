@@ -1,0 +1,24 @@
+[submodule "fcppt"]
+	path = fcppt
+	url = https://github.com/freundlich/fcppt.git
+[submodule "libawl"]
+	path = libawl
+	url = https://github.com/pmiddend/libawl.git
+[submodule "mizuiro"]
+	path = mizuiro
+	url = https://github.com/freundlich/mizuiro.git
+[submodule "spacegameengine"]
+	path = spacegameengine
+	url = https://github.com/freundlich/spacegameengine.git
+[submodule "majutsu"]
+	path = majutsu
+	url = https://github.com/freundlich/majutsu.git
+[submodule "alda"]
+	path = alda
+	url = https://github.com/freundlich/alda.git
+[submodule "statechart"]
+	path = statechart
+	url = https://github.com/freundlich/statechart.git
+[submodule "sanguis"]
+	path = sanguis
+	url = https://github.com/freundlich/sanguis.git
