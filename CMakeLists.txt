@@ -36,6 +36,18 @@ macro(
 	)
 endmacro()
 
+option(
+	ENABLE_TEST
+	"Enable testing"
+	OFF
+)
+
+if(
+	ENABLE_TEST
+)
+	enable_testing()
+endif()
+
 add_subdirectory(
 	fcppt
 )
