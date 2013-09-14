@@ -103,11 +103,32 @@ add_subdirectory(
 )
 
 # Make sure mizuiro and majutsu (which are header-only) are processed before sge
-add_dependencies(
-	sgecore
-	mizuiro_dummy
-	majutsu_dummy
+macro(
+	add_sge_dep
+	LIB_NAME
 )
+	add_dependencies(
+		${LIBNAME}
+		mizuiro_dummy
+		majutsu_dummy
+	)
+endmacro()
+
+if(
+	ENABLE_SHARED
+)
+	add_sge_dep(
+		sgecore
+	)
+endif()
+
+if(
+	ENABLE_STATIC
+)
+	add_sge_dep(
+		sgecore_static
+	)
+endif()
 
 add_subdirectory(
 	alda
