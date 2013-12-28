@@ -42,11 +42,37 @@ option(
 	OFF
 )
 
+macro(
+	disable_option
+	OPTION_NAME
+)
+	set(
+		${OPTION_NAME}
+		OFF
+		CACHE
+		BOOL
+		"Disable ${OPTION_NAME} by default"
+	)
+endmacro()
+
+disable_option(
+	ENABLE_EXAMPLES
+)
+
+disable_option(
+	ENABLE_DOC
+)
+
+disable_option(
+	ENABLE_TEST
+)
+
 if(
 	ENABLE_TEST
 )
 	enable_testing()
 endif()
+
 
 add_subdirectory(
 	fcppt
@@ -96,6 +122,66 @@ make_config_path(
 
 make_config_path(
 	majutsu
+)
+
+disable_option(
+	ENABLE_CAMERA
+)
+
+disable_option(
+	ENABLE_CEGUI
+)
+
+disable_option(
+	ENABLE_CG
+)
+
+disable_option(
+	ENABLE_FONTBITMAP
+)
+
+disable_option(
+	ENABLE_GRAPH
+)
+
+disable_option(
+	ENABLE_LINE_DRAWER
+)
+
+disable_option(
+	ENABLE_MODELMD3
+)
+
+disable_option(
+	ENABLE_MODELOBJ
+)
+
+disable_option(
+	ENABLE_OPENCL
+)
+
+disable_option(
+	ENABLE_POSTPROCESSING
+)
+
+disable_option(
+	ENABLE_PROJECTILE
+)
+
+disable_option(
+	ENABLE_RESOURCE_TREE
+)
+
+disable_option(
+	ENABLE_SCENIC
+)
+
+disable_option(
+	ENABLE_SHADER
+)
+
+disable_option(
+	ENABLE_WAVE
 )
 
 add_subdirectory(
