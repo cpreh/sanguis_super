@@ -16,9 +16,6 @@
 [submodule "alda"]
 	path = alda
 	url = https://github.com/freundlich/alda.git
-[submodule "statechart"]
-	path = statechart
-	url = https://github.com/freundlich/statechart.git
 [submodule "sanguis"]
 	path = sanguis
 	url = https://github.com/freundlich/sanguis.git

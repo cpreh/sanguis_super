@@ -230,14 +230,6 @@ append_modules_path(
 	spacegameengine
 )
 
-set(
-	STATECHART_INCLUDE_DIR
-	"${CMAKE_CURRENT_SOURCE_DIR}/statechart/include"
-	CACHE
-	FILEPATH
-	"Statechart include directory"
-)
-
 make_config_path(
 	alda
 )
