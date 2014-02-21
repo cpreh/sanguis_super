@@ -1,15 +1,6 @@
 cmake_minimum_required(
-	VERSION 2.8
-)
-
-# Sorry, installing from this configuration is currently not supported
-set(
-	CMAKE_INSTALL_PREFIX
-	""
-	CACHE
-	FILEPATH
-	"Disabled install prefix"
-	FORCE
+	VERSION
+	2.8.12
 )
 
 project(
