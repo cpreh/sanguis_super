@@ -33,6 +33,12 @@ option(
 	OFF
 )
 
+option(
+	ENABLE_CLIENT
+	"Build the client"
+	ON
+)
+
 macro(
 	disable_option
 	OPTION_NAME
@@ -77,9 +83,13 @@ make_config_path(
 	fcppt
 )
 
-add_subdirectory(
-	libawl
+if(
+	ENABLE_CLIENT
 )
+	add_subdirectory(
+		libawl
+	)
+endif()
 
 set(
 	ENABLE_FCPPT
@@ -97,15 +107,19 @@ add_subdirectory(
 	majutsu
 )
 
-# The library should be renamed to awl at some point
-set(
-	awl_DIR
-	"${CMAKE_BINARY_DIR}/libawl/config"
+if(
+	ENABLE_CLIENT
 )
+	# The library should be renamed to awl at some point
+	set(
+		awl_DIR
+		"${CMAKE_BINARY_DIR}/libawl/config"
+	)
 
-append_modules_path(
-	libawl
-)
+	append_modules_path(
+		libawl
+	)
+endif()
 
 make_config_path(
 	mizuiro
@@ -169,6 +183,10 @@ disable_option(
 
 disable_option(
 	ENABLE_SHADER
+)
+
+disable_option(
+	ENABLE_TOOLS
 )
 
 disable_option(
