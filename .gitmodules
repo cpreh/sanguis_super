@@ -3,7 +3,7 @@
 	url = https://github.com/freundlich/fcppt.git
 [submodule "libawl"]
 	path = libawl
-	url = https://github.com/pmiddend/libawl.git
+	url = https://github.com/freundlich/libawl.git
 [submodule "mizuiro"]
 	path = mizuiro
 	url = https://github.com/freundlich/mizuiro.git
