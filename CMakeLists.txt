@@ -7,6 +7,11 @@ project(
 	sanguis-super
 )
 
+set(
+	FCPPT_DONT_EXPORT
+	TRUE
+)
+
 macro(
 	append_modules_path
 	PROJECT_NAME
