@@ -96,14 +96,6 @@ if(
 	)
 endif()
 
-set(
-	ENABLE_FCPPT
-	ON
-	CACHE
-	BOOL
-	"Build mizuiro using fcppt"
-)
-
 add_subdirectory(
 	mizuiro
 )
@@ -132,6 +124,10 @@ make_config_path(
 
 make_config_path(
 	majutsu
+)
+
+disable_option(
+	ENABLE_BVH
 )
 
 disable_option(
