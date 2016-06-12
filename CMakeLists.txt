@@ -16,9 +16,10 @@ macro(
 	append_modules_path
 	PROJECT_NAME
 )
-	set(
+	list(
+		APPEND
 		CMAKE_MODULE_PATH
-		"${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/CMakeModules;${CMAKE_MODULE_PATH}"
+		"${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/CMakeModules"
 	)
 endmacro()
 
@@ -236,8 +237,10 @@ set(
 	"${CMAKE_BINARY_DIR}/spacegameengine/config"
 )
 
-append_modules_path(
-	spacegameengine
+list(
+	APPEND
+	CMAKE_MODULE_PATH
+	${CMAKE_CURRENT_SOURCE_DIR}/spacegameengine/cmake/modules/public
 )
 
 make_config_path(
