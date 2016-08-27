@@ -18,17 +18,6 @@ set(
 )
 
 macro(
-	append_modules_path
-	PROJECT_NAME
-)
-	list(
-		APPEND
-		CMAKE_MODULE_PATH
-		"${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT_NAME}/CMakeModules"
-	)
-endmacro()
-
-macro(
 	make_config_path
 	PROJECT_NAME
 )
@@ -86,8 +75,10 @@ add_subdirectory(
 	fcppt
 )
 
-append_modules_path(
-	fcppt
+list(
+	APPEND
+	CMAKE_MODULE_PATH
+	"${CMAKE_CURRENT_SOURCE_DIR}/fcppt/cmake/modules"
 )
 
 make_config_path(
@@ -119,8 +110,10 @@ if(
 		"${CMAKE_BINARY_DIR}/libawl/config"
 	)
 
-	append_modules_path(
-		libawl
+	list(
+		APPEND
+		CMAKE_MODULE_PATH
+		"${CMAKE_CURRENT_SOURCE_DIR}/libawl/CMakeModules"
 	)
 endif()
 
