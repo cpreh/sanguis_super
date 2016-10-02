@@ -189,33 +189,6 @@ add_subdirectory(
 	spacegameengine
 )
 
-# Make sure mizuiro (which is header-only) is processed before sge
-macro(
-	add_sge_dep
-	LIB_NAME
-)
-	add_dependencies(
-		${LIBNAME}
-		mizuiro_dummy
-	)
-endmacro()
-
-if(
-	ENABLE_SHARED
-)
-	add_sge_dep(
-		sgecore
-	)
-endif()
-
-if(
-	ENABLE_STATIC
-)
-	add_sge_dep(
-		sgecore_static
-	)
-endif()
-
 add_subdirectory(
 	alda
 )
