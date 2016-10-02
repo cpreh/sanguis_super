@@ -97,10 +97,6 @@ add_subdirectory(
 	mizuiro
 )
 
-add_subdirectory(
-	majutsu
-)
-
 if(
 	ENABLE_CLIENT
 )
@@ -119,10 +115,6 @@ endif()
 
 make_config_path(
 	mizuiro
-)
-
-make_config_path(
-	majutsu
 )
 
 disable_option(
@@ -197,7 +189,7 @@ add_subdirectory(
 	spacegameengine
 )
 
-# Make sure mizuiro and majutsu (which are header-only) are processed before sge
+# Make sure mizuiro (which is header-only) is processed before sge
 macro(
 	add_sge_dep
 	LIB_NAME
@@ -205,7 +197,6 @@ macro(
 	add_dependencies(
 		${LIBNAME}
 		mizuiro_dummy
-		majutsu_dummy
 	)
 endmacro()
 

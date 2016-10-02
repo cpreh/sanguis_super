@@ -10,9 +10,6 @@
 [submodule "spacegameengine"]
 	path = spacegameengine
 	url = https://github.com/freundlich/spacegameengine.git
-[submodule "majutsu"]
-	path = majutsu
-	url = https://github.com/freundlich/majutsu.git
 [submodule "alda"]
 	path = alda
 	url = https://github.com/freundlich/alda.git
