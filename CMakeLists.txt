@@ -70,6 +70,20 @@ if(
 	enable_testing()
 endif()
 
+set(
+	ENABLE_BOOST
+	ON
+)
+
+set(
+	ENABLE_FILESYSTEM
+	ON
+)
+
+set(
+	ENABLE_SYSTEM
+	ON
+)
 
 add_subdirectory(
 	fcppt
