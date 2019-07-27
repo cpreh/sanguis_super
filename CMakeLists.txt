@@ -40,15 +40,37 @@ option(
 )
 
 macro(
-	disable_option
+	force_option
 	OPTION_NAME
+	VALUE
 )
 	set(
 		${OPTION_NAME}
-		OFF
+		${VALUE}
 		CACHE
 		BOOL
 		"Disable ${OPTION_NAME} by default"
+	)
+
+endmacro()
+
+macro(
+	enable_option
+	OPTION_NAME
+)
+	force_option(
+		${OPTION_NAME}
+		ON
+	)
+endmacro()
+
+macro(
+	disable_option
+	OPTION_NAME
+)
+	force_option(
+		${OPTION_NAME}
+		OFF
 	)
 endmacro()
 
@@ -70,19 +92,16 @@ if(
 	enable_testing()
 endif()
 
-set(
+enable_option(
 	ENABLE_BOOST
-	ON
 )
 
-set(
+enable_option(
 	ENABLE_FILESYSTEM
-	ON
 )
 
-set(
+enable_option(
 	ENABLE_SYSTEM
-	ON
 )
 
 add_subdirectory(
