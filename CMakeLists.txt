@@ -100,10 +100,6 @@ enable_option(
 	ENABLE_FILESYSTEM
 )
 
-enable_option(
-	ENABLE_SYSTEM
-)
-
 add_subdirectory(
 	fcppt
 )
@@ -220,6 +216,10 @@ disable_option(
 
 add_subdirectory(
 	spacegameengine
+)
+
+enable_option(
+	ENABLE_NET
 )
 
 add_subdirectory(
